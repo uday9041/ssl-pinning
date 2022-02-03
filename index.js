@@ -5,16 +5,16 @@ const { RNSslPinning } = NativeModules;
 
 // Changes done in this repo are visible in another file
 
-// const fetch = (url, obj, callback) => {
-//     let deferred = Q.defer();
+const fetch = (url, obj, callback) => {
+    let deferred = Q.defer();
 
-//     if (obj.headers) {
-//         obj.headers = Object.keys(obj.headers)
-//             .reduce((acc, key) => ({
-//                 ...acc,
-//                 [obj.caseSensitiveHeaders ? key : key.toLowerCase()]: obj.headers[key]
-//             }), {})
-//     }
+    if (obj.headers) {
+        obj.headers = Object.keys(obj.headers)
+            .reduce((acc, key) => ({
+                ...acc,
+                [obj.caseSensitiveHeaders ? key : key.toLowerCase()]: obj.headers[key]
+            }), {})
+    }
 
 
     RNSslPinning.fetch(url, obj, (err, res) => {
