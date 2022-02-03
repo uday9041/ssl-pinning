@@ -3,6 +3,8 @@ import Q from 'q'
 
 const { RNSslPinning } = NativeModules;
 
+// Changes done in this repo are visible in another file
+
 const fetch = (url, obj, callback) => {
     let deferred = Q.defer();
 
